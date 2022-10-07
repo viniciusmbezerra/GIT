@@ -9,19 +9,26 @@ git init
 
 Adicionando origem
 ```
-git remote add origin https://github.com/viniciusmbezerra/GIT.git
+git remote add origin https://github.com/
 git branch -M main
 git push -u origin main
 ```
 
 Clonar
 ```
-git clone https://github.com/viniciusmbezerra/GIT.git
+git clone https://github.com/
 ```
 
-Verificar mudanças
+Verificar mudanças, apresentando informações da branch
 ```
 git status
+git show
+git show nome_branch
+```
+Exibindo diferenças
+```
+git diff nome_branch
+git diff nome_branch:arquivo1 nome_branch:arquivo2
 ```
 
 Adicionar arquivos
@@ -42,14 +49,16 @@ git push
 git pull
 ```
 
-Deletar arquivo
+Deletar arquivo | diretório
 ```
 git rm nome_arquivo
+git rm -r nome_dir
 ```
 
 Histórico de alterações
 ```
 git log
+git shortlog
 ```
 
 Renomeando arquivos e diretórios
@@ -67,23 +76,39 @@ Ignorando arquivos e diretórios
 coloque no .gitignore
 ```
 
-Desfazendo todas as auterações de uma branch
+Desfazendo todas as alterações de uma branch
 ```
 git reset --hard nome_branch
 ```
 
 ## ``Branch``
 
-Criar, listar, deletar, mudar branchs
+Criar, deletar, mudar branchs
 ```
 git branch nome_branch
-git branch
 git branch -D nome_branch
 git checkout nome_branch
 ```
 Criar e mudar para uma branch
 ```
 git checkout -b nome_branch
+```
+Listar branchs remotas
+```
+git branch -r
+```
+Listar branchs remotas e locais
+```
+git branch -a
+```
+Listar branchs com detalhes
+```
+git branch -v
+```
+
+Renomear branch
+```
+git branch -m nome_atual nome_novo
 ```
 
 ``Sempre faça o commit antes de mudar de branch``
@@ -143,3 +168,13 @@ git push origin --tags
 git push --delete origin nome_tag
 ```
 
+## ``Submódulos``
+Repositórios dentro de repositórios
+
+Listar, Adicionar, Enviando para o remoto, Atualizando
+```
+git submodule
+git submodule add https://github.com/
+git push --recurse-submodules=on-demand
+git pull
+```
