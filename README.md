@@ -13,6 +13,14 @@ git remote add origin https://github.com/
 git branch -M main
 git push -u origin main
 ```
+Conexão com ssh
+```php
+ssh-keygen //no terminal local
+//Your public key has been saved in C:\Users\vinic/.ssh/id_rsa.pub.
+cat C:\Users\usuario/.ssh/id_rsa.pub //pegando chave pública
+//adicionar chave no github e no remote local
+git remote add origin git@github.com:teste/teste.git
+```
 
 Clonar
 ```
