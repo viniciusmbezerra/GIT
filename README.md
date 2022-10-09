@@ -188,3 +188,11 @@ git submodule add https://github.com/
 git push --recurse-submodules=on-demand
 git pull
 ```
+Removendo Submodule
+```
+git submodule deinit -f -- meu/submodulo
+
+rm -rf .git/modules/meu/submodulo
+
+git rm -f meu/submodulo
+```
