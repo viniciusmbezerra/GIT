@@ -99,9 +99,10 @@ git branch nome_branch
 git branch -D nome_branch
 git checkout nome_branch
 ```
-Criar e mudar para uma branch
+Criar e mudar para uma branch, Criar e mudar a partir de um commit
 ```
 git checkout -b nome_branch
+git checkout -b BRANCH_NAME COMMIT_ID
 ```
 Listar branchs remotas
 ```
